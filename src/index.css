@@ -1,0 +1,47 @@
+html {
+  background-color: #f1d7ff;
+}
+
+#root {
+  background-color: #f1d7ff;
+}
+.card {
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.img-card {
+  min-height: 250px;
+  min-width: 250px;
+  object-fit: cover;
+}
+
+.cortar-texto {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.enlace {
+  text-decoration: none;
+}
+
+.titulo{
+    color: #734a91;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media (min-width: 991px) {
+    .titulo{
+        font-size: 60px;
+    }
+}
+
+.btn-form{
+    background-color: #f1d7ff;
+    border: none!important;
+}
