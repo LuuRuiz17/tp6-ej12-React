@@ -5,9 +5,10 @@ html {
 #root {
   background-color: #f1d7ff;
 }
-.card {
+.enlace .card {
   max-height: 550px;
   overflow: hidden;
+  border: 3px groove rgba(149, 3, 149, 0.5);
 }
 
 .img-card {
