@@ -32,7 +32,7 @@ function App() {
     if (respuesta.status === 200) {
       const noticia = await respuesta.json();
       setNoticias(noticia.results);
-    }else{
+    } else {
       console.log("no hay noticias de esta combinación")
     }
 
@@ -40,7 +40,7 @@ function App() {
 
   const obtenerNoticia = async () => {
     try {
-      const respuesta = await fetch('https://newsdata.io/api/1/latest?apikey=pub_22b6a37c0d77443c9b412c3fa017180e&country=ar&language=es');
+      const respuesta = await fetch('https://newsdata.io/api/1/latest?apikey=pub_22b6a37c0d77443c9b412c3fa017180e&language=es');
       if (respuesta.status === 200) {
         const noticia = await respuesta.json();
         setNoticias(noticia.results);
@@ -56,7 +56,7 @@ function App() {
       <Form className="container" onSubmit={handleSubmit(filtrarRespuesta)}>
         <Row className="mx-auto">
           <Col xs={6} className="d-flex">
-            <select aria-label="Default select example"{...register('filtroCategoria')}>
+            <Form.Select className="w-100" {...register('filtroCategoria')}>
               <option value="">Buscar por categoría</option>
               <option value="sports">Deportes</option>
               <option value="science">Ciencia</option>
@@ -64,17 +64,17 @@ function App() {
               <option value="world">Mundial</option>
               <option value="food">Comida</option>
               <option value="crime">Policiales</option>
-            </select>
+            </Form.Select>
           </Col>
           <Col xs={6} className="d-flex">
-            <select aria-label="Default select example"{...register('filtroPais')}>
+            <Form.Select className="w-100" {...register('filtroPais')}>
               <option value="">Seleccionar país</option>
               <option value="ar">Argentina</option>
               <option value="us">Estados Unidos</option>
               <option value="br">Brasil</option>
               <option value="fr">Francia</option>
               <option value="jp">Japón</option>
-            </select>
+            </Form.Select>
             <button type="submit" className="btn-form ms-auto"><i className="bi bi-search ms-2"></i></button>
           </Col>
         </Row>
